@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type ="image/png"  href = "logo-redondo.png" />
+  <title>QueloKhe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+    .tournament{
+  display:flex;
+  flex-direction:row;
+}
+.round{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:200px;
+  list-style:none;
+  padding:0;
+}
+  .round .spacer{ flex-grow:1; }
+  .round .spacer:first-child,
+  .round .spacer:last-child{ flex-grow:.5; }
+
+  .round .game-spacer{
+    flex-grow:1;
+  }
+
+    li.game{
+  padding-left:20px;
+}
+
+  li.game.winner{
+    font-weight:bold;
+  }
+  li.game span{
+    float:right;
+    margin-right:5px;
+  }
+
+  li.game-top{ border-bottom:1px solid #aaa; }
+
+  li.game-spacer{ 
+    border-right:1px solid #aaa;
+    min-height:40px;
+  }
+
+  li.game-bottom{ 
+    border-top:1px solid #aaa;
+  }
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      line-height: 150%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: #e9e9e9;
+    }
+
+    .header h1 {
+      color: #222222;
+      font-size: 30px;
+      font-family: "Pacifico", cursive;
+    }
+
+    .header .social a {
+      padding: 0 5px;
+      color: #222222;
+    }
+
+    .left {
+      float: left;
+      width: 180px;
+      margin: 0;
+      padding: 1em;
+    }
+
+    .content {
+      margin-left: 190px;
+      border-left: 1px solid #d4d4d4;
+      padding: 1em;
+      overflow: hidden;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    li a.active {
+      background-color: #84e4e2;
+      color: white;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #29292a;
+      color: white;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      margin: 30px 0;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      padding: 8px;
+    }
+
+    tr:nth-child(1) {
+      background-color: #84e4e2;
+      color: white;
+    }
+
+    tr td i.fas {
+      display: block;
+      font-size: 35px;
+      text-align: center;
+    }
+
+    .btn-primary {
+    color: #57abff;
+    background-color: #7cc;
+    border-color: #5bc2c2;
+    color: #000;
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>QueloKhe</h1>
+      <div class="social">
+        <a href="https://instagram.com/que_lo_khe?igshid=Mzc1MmZhNjY="><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/que_khe?t=Q6Zl9hNEqx06rE-N_xh4Fg&s=08"><i class="fab fa-twitter"></i></a>
+      </div>
+    </header>
+    <aside class="left">
+      <img src="logo nuevo.jpg" width="160px" />
+      <ul>
+        <li><a href="#home" onclick ="location.href = 'index.html'">Inicio</a></li>
+        <li><a class="active" href="#Torneos Activos">Torneos Activos</a></li>
+        <li><a onclick ="location.href = 'participa.html'"href="#Participa">Participa</a></li>
+        <li><a onclick ="location.href = 'avisos.html'"href="#Avisos">Avisos</a></li>
+      </ul>
+      <br><br>
+    </aside>
+    <main class="content">
+      <h2>QueloChowDown III</h2>
+      <a class="btn btn-primary" color = "light-blue" href="Torneos Activos1.html">Grupo 1</a> 
+      <a class="btn btn-primary" color = "light-blue" href="Torneos Activos.html">Grupo 2</a>
+      <a class="btn btn-primary" color = "light-blue" href="Torneos Activos2.html">Grupo 3</a>
+      <a class="btn btn-primary" color = "light-blue" href="Playoff.html">Play-off</a>  
+      <h3>Play-Off</h3>
+      <p>- Cuadro de Torneo</p>
+      <div class="tournament">
+        <ul class="round round-1">
+          <li class="spacer">&nbsp;</li>
+          
+          <li class="game game-top ">Miki<span>0</span></li>
+          <li class="game game-spacer">&nbsp;</li>
+          <li class="game game-bottom ">Ganador Repesca 2<span>0</span></li>
+      
+          <li class="spacer">&nbsp;</li>
+          
+          <li class="game game-top ">David <span>0</span></li>
+          <li class="game game-spacer">&nbsp;</li>
+          <li class="game game-bottom ">Luis <span>0</span></li>
+      
+          <li class="spacer">&nbsp;</li>
+          
+          <li class="game game-top ">Javi <span>0</span></li>
+          <li class="game game-spacer">&nbsp;</li>
+          <li class="game game-bottom ">Salva <span>0</span></li>
+      
+          <li class="spacer">&nbsp;</li>
+          
+          <li class="game game-top ">Manu <span>0</span></li>
+          <li class="game game-spacer">&nbsp;</li>
+          <li class="game game-bottom ">Ganador Repesca 1<span>0</span></li>
+      
+          <li class="spacer">&nbsp;</li>
+        </ul>
+        <ul class="round round-2">
+          <li class="spacer">&nbsp;</li>
+          
+          <li class="game game-top ">TBD <span>0</span></li>
+          <li class="game game-spacer">&nbsp;</li>
+          <li class="game game-bottom ">TBD <span>0</span></li>
+      
+          <li class="spacer">&nbsp;</li>
+          
+          <li class="game game-top ">TBD <span>0</span></li>
+          <li class="game game-spacer">&nbsp;</li>
+          <li class="game game-bottom ">TBD <span>0</span></li>
+      
+          <li class="spacer">&nbsp;</li>
+        </ul>
+        <ul class="round round-3">
+          <li class="spacer">&nbsp;</li>
+          
+          <li class="game game-top ">TBD <span>0</span></li>
+          <li class="game game-spacer">&nbsp;</li>
+          <li class="game game-bottom ">TBD <span>0</span></li>
+          
+          <li class="spacer">&nbsp;</li>
+        </ul>   
+
+      </div>
+      <p>- Repesca</p>
+      <div class="tournament">
+      <ul class="round round-1">
+        <li class="game game-top ">Mario <span>0</span></li>
+        <li class="game game-spacer">&nbsp;</li>
+        <li class="game game-bottom ">Kino <span>0</span></li>
+      </ul>
+      <ul class="round round-2">
+        <li class="game game-top ">Ganador Repesca 1</li>
+      </ul>
+    </div>
+<br>
+    <div class="tournament">
+      <ul class="round round-1">
+        <li class="game game-top ">Perdedor Repesca 1 <span>0</span></li>
+        <li class="game game-spacer">&nbsp;</li>
+        <li class="game game-bottom ">JM <span>0</span></li>
+      </ul>
+      <ul class="round round-2">
+        <li class="game game-top ">Ganador Repesca 2</li>
+      </ul>
+    </div>
+    <p>- Lista de Pokemons</p>
+    <table>
+      <tr>
+        <th>Nombre Participante</th>
+        <th style="width:70%">Pokemons</th>
+      </tr>
+      <tr>
+        <td align="center">Miki</td>
+        <td><a href ="https://www.smogon.com/dex/sv/pokemon/tapu-koko/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0785.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/iron-valiant/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/1006.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/ferrothorn/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0598.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/cinderace/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0815.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/iron-moth/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0994.png"/></a>
+          <a href ="https://www.smogon.com/dex/sm/pokemon/latias/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0380_01.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/blacephalon/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0806.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/meowscarada/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0908.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/maushold/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0925_01.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/milotic/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0350.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/hawlucha/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0701.png"/></a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">Manu</td>
+        <td><a href ="https://www.smogon.com/dex/sv/pokemon/walking-wake/"><img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/walking-wake.png" width="150" height="150"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/zeraora/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0807.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/tapu-fini/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0788.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/tangrowth/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0465.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/venusaur/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0003.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/victini/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0494.png"/></a>
+          <a href ="https://www.smogon.com/dex/sm/pokemon/charizard/"><img src="https://projectpokemon.org/images/sprites-models/sv-sprites-home/0006_02.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/volcarona/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0637.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/gastrodon/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0423.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/whimsicott/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0547.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/great-tusk/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0984.png"/></a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">Javi</td>
+        <td><a href ="https://www.smogon.com/dex/sv/pokemon/great-tusk/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0984.png"/></a>
+          <a href ="https://www.smogon.com/dex/sm/pokemon/venusaur/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0003_01.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/annihilape/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0979.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/kingambit/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0983.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/iron-moth/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0994.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/araquanid/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0752.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/gliscor/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0472.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/scizor/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0212.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/ambipom/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0424.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/togekiss/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0468.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/tapu-koko/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0785.png"/></a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">David</td>
+        <td><a href ="https://www.smogon.com/dex/sv/pokemon/rotom-wash/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0479_02.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/orthworm/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0968.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/skeledirge/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0911.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/meowstic-m/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0678.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/arctozolt/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0881.png"/></a>
+          <a href ="https://www.smogon.com/dex/sm/pokemon/diancie/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0719_01.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/mimikyu/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0778.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/meowscarada/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0908.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/ting-lu/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/1003.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/cinderace/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0815.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/celesteela/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0797.png"/></a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">Luis</td>
+        <td><a href ="https://www.smogon.com/dex/sv/pokemon/walking-wake/"><img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/walking-wake.png" width="150" height="150"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/torkoal/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0324.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/heatran/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0485.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/skarmory/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0227.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/clefable/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0036.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/chansey/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0113.png"/></a>
+          <a href ="https://www.smogon.com/dex/sm/pokemon/latios/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0381_01.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/galvantula/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0596.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/slowbro/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0080.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/victreebel/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0071.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/garganacl/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0934.png"/></a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">Salva</td>
+        <td><a href ="https://www.smogon.com/dex/sv/pokemon/dragapult/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0887.png"/></a>
+          <a href ="https://www.smogon.com/dex/sm/pokemon/beedrill/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0015_01.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/corviknight/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0823.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/toxapex/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0748.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/hydreigon/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0635.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/rotom-heat/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0479_01.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/blaziken/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0257.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/tyranitar/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0248.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/azumarill/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0184.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/slowking/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0199.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/kingambit/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0983.png"/></a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">Mario</td>
+        <td><a href ="https://www.smogon.com/dex/sv/pokemon/landorus-therian/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0645_01.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/dragapult/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0887.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/tapu-lele/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0786.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/amoonguss/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0591.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/darmanitan/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0555.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/togekiss/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0468.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/bellibolt/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0939.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/cresselia/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0488.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/arcanine/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0059.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/mudsdale/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0750.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/ferrothorn/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0598.png"/></a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">Kino</td>
+        <td><a href ="https://www.smogon.com/dex/sv/pokemon/zamazenta/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0889.png"/></a>
+          <a href ="https://www.smogon.com/dex/sm/pokemon/latias/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0380_01.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/kartana/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0798.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/blacephalon/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0806.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/eelektross/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0604.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/tapu-fini/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0788.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/archeops/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0567.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/weavile/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0461.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/umbreon/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0197.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/nidoking/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0034.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/urshifu-rapid-strike/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0892.png"/></a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">JM</td>
+        <td><a href ="https://www.smogon.com/dex/sv/pokemon/great-tusk/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0984.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/heatran/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0485.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/tapu-fini/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0788.png"/></a>
+          <a href ="https://www.smogon.com/dex/sm/pokemon/latios/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0381_01.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/umbreon/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0197.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/tangrowth/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0465.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/volcanion/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0721.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/zeraora/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0807.png"/></a>
+          <br>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/celesteela/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0797.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/urshifu-rapid-strike/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0892.png"/></a>
+          <a href ="https://www.smogon.com/dex/sv/pokemon/zapdos/"><img src = "https://projectpokemon.org/images/sprites-models/sv-sprites-home/0145.png"/></a>
+        </td>
+      </tr>
+      <tr>
+    </table>
+    <hr><br>
+
+      </main>
+  </div>
+</body>
+
+</html>
