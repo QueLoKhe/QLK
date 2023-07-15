@@ -1,1 +1,1 @@
-Página Web de QLK versión 1.0
+Página Web de QLK versión 2.0
